@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Audibles",
+    "slug": "audibles",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0b0b10"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.audibles.mobile",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Audibles needs the microphone to record and transcribe your meetings.",
+        "NSPhotoLibraryUsageDescription": "Audibles needs photo access to set your profile picture."
+      }
+    },
+    "android": {
+      "package": "app.audibles.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0b0b10"
+      },
+      "permissions": ["RECORD_AUDIO"]
+    },
+    "web": { "favicon": "./assets/favicon.png" },
+    "plugins": [
+      "expo-font",
+      ["expo-av", { "microphonePermission": "Audibles needs the microphone to record meetings." }],
+      ["expo-image-picker", { "photosPermission": "Audibles needs photo access to set your profile picture." }]
+    ],
+    "extra": {
+      "supabaseUrl": "https://hddbsorrcuceqxvfklji.supabase.co",
+      "supabaseAnonKey": "sb_publishable_vfsDc0_lb_2BKZR0BiW42Q_d_w0sbiu"
+    }
+  }
+}
